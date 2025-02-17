@@ -15,14 +15,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://open.dirtywork.solutions/pythings"
-Documentation = "https://open.dirtywork.solutions/pythings/docs"
-Source = "https://github.com/DirtyWork-Solutions/PyThings"
-Issues = "https://github.com/DirtyWork-Solutions/PyThings/tree/main/.github/ISSUE_TEMPLATE"
+Homepage = "https://open.dirtywork.solutions/pyextend"
+Documentation = "https://open.dirtywork.solutions/pyextend/docs"
+Source = "https://github.com/DirtyWork-Solutions/PyExtend"
+Issues = "https://github.com/DirtyWork-Solutions/PyExtend/tree/main/.github/ISSUE_TEMPLATE"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.setuptools.extension]
-name = "pythings.extension"
-sources = ["src/pythings/extension.c"]
