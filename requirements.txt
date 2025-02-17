@@ -9,5 +9,5 @@ gplwordnet~=1.0.3
 networkx~=3.4.2
 numpy~=2.2.2
 pandas~=2.2.3
-
+antlr4-python3-runtime~=4.9.3
 pyutil~=0.1.0
