@@ -3,15 +3,14 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pythings"
-version = "0.1.0"
+name = "pyextend"
+version = "0.0.1"
 description = "A Python project for managing Things and their relationships."
 authors = [{name = "Aidan Hogg", email = "aidan.hogg@dirtywork.solutions"}]
 license = {file = "LICENSE.md"}
 readme = "README.md"
 dependencies = [
-    "cachetools",
-    "pydantic"
+    "pyutils"
 ]
 
 [project.urls]
