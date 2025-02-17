@@ -11,5 +11,3 @@ class PyExtendException(PyForgeException):
 class HooksException(PyExtendException):
     def __init__(self, message: str = 'An unknown error occurred in the PyExtend system.'):
         super().__init__(message=message)
-
-raise PyExtendException()
