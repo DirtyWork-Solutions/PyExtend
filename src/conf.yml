@@ -1,0 +1,71 @@
+expand:
+  events:
+    enabled: true
+    max_event_queue_size: 50000
+    default_execution_mode: "adaptive"
+    # Options: sync, async, adaptive, deferred
+    middleware:
+      enabled: true
+      layers:
+        - name: "logging"
+          enabled: false
+        - name: "rate_limiter"
+          enabled: true
+          max_per_second: 100
+        - name: "security"
+          enabled: false
+          enforce_auth: true
+          auth_method: "token"
+          # Options: token, api_key, oauth
+        - name: "custom"
+          enabled: false
+    execution:
+      sync_threshold: 5
+      async_event_types: ["heavy_task", "notification"]
+      deferred_event_types: ["batch_process"]
+      system_load_defer_threshold: 80
+    prioritisation:
+      enabled: true
+      default_priority: 0
+      high_priority_event_types: ["security_alert", "system_failure"]
+      priority_decay: 0.05
+
+    persistence:
+      enabled: false
+      storage_backend: "sqlite"
+      retention_period_days: 30
+      max_stored_events: 1000000
+
+    monitoring:
+      enabled: true
+      metrics:
+        latency_tracking: true
+        failure_rate_tracking: true
+        event_volume_tracking: true
+      live_dashboard:
+        enabled: true
+        websocket_port: 8081
+
+    subscriptions:
+      dynamic_subscriptions: true
+      allow_wildcards: true
+      conditional_execution: true
+
+    fault_tolerance:
+      enabled: true
+      max_retries: 5
+      retry_backoff: 3
+
+      dead_letter_queue:
+        enabled: true
+        storage_backend: "sqlite"
+
+    security:
+      enforce_event_auth: true
+      event_signing: true
+      allowed_origins: ["internal", "trusted_service"]
+
+    remote_events:
+      enabled: false
+      transport: "redis_pubsub"
+      remote_event_types: []
