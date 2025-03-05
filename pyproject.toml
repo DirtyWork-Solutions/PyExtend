@@ -3,10 +3,10 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyextendable"
+name = "runecaller"
 version = "0.1.0"
-description = "A PyForge Ecosytem Project for adaptability, modular and extendable."
-authors = [{name = "Aidan Hogg", email = "aidan.hogg@dirtywork.solutions"}]
+description = "A PyForged Ecosytem Project for adaptability, modular and extendable."
+authors = [{name = "DirtyWork Solutions Limited", email = "runecaller@open.dirtywork.solutions"}]
 license = {file = "LICENSE.md"}
 readme = "README.md"
 dependencies = [
@@ -14,10 +14,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://open.dirtywork.solutions/pyextend"
-Documentation = "https://open.dirtywork.solutions/pyextend/docs"
+Homepage = "https://open.dirtywork.solutions/runecaller"
+Documentation = "https://open.dirtywork.solutions/runecaller/docs"
 Source = "https://github.com/DirtyWork-Solutions/PyExtend"
 Issues = "https://github.com/DirtyWork-Solutions/PyExtend/tree/main/.github/ISSUE_TEMPLATE"
-
-[tool.setuptools.packages.find]
-where = ["src"]
